@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bingo Game - Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="logo.png" alt="RMB Logo" class="logo">
+    <h1>Bingo Dashboard</h1>
+  </header>
+
+  <!-- Stats -->
+  <section class="dashboard">
+    <div class="stats-box">
+      <h2>Players Online</h2>
+      <p id="playersCount">1000</p>
+    </div>
+
+    <!-- Payment Section -->
+    <div class="payment-box">
+      <h2>Buy Bingo Tickets</h2>
+      <button class="btn" onclick="buyTicket('stripe')">Pay with Stripe</button>
+      <button class="btn" onclick="buyTicket('paypal')">Pay with PayPal</button>
+      <button class="btn" onclick="buyTicket('razorpay')">Pay with Razorpay</button>
+    </div>
+  </section>
+
+  <!-- Game Board -->
+  <section class="game-board">
+    <h2>Your Bingo Card</h2>
+    <div id="bingoCard" class="bingo-grid"></div>
+    <div style="text-align:center;margin-top:12px;">
+      <button class="btn" onclick="startDemoRound()">Start Demo Round</button>
+    </div>
+  </section>
+
+  <script src="game.js"></script>
+</body>
+</html>
